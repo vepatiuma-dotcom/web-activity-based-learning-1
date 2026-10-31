@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Explore World Travel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f8f8;
+}
+
+/* Navigation */
+nav {
+    background: #064663;
+    padding: 15px;
+    text-align: center;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+/* Banner */
+header {
+    background: linear-gradient(#0007,#0007),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+/* Sections */
+section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+h2 {
+    color: #064663;
+}
+
+/* Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px gray;
+    padding-bottom: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #064663;
+}
+
+.price {
+    color: #e76f00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button {
+    background: #ff9f1c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Itinerary */
+.day {
+    background: white;
+    width: 180px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+}
+
+/* Form */
+form {
+    background: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+    background: #064663;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .card, .day {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        box-sizing: border-box;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <h2>🌍 EXPLORE WORLD</h2>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#packages">Packages</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Banner -->
+<header id="home">
+    <h1>Explore The Beautiful World</h1>
+    <h2 style="color:white;">Discover New Places and Create Memories</h2>
+    <p>Your Dream Vacation Starts Here!</p>
+    <button onclick="location.href='#packages'">
+        Explore Packages
+    </button>
+</header>
+
+<!-- About -->
+<section>
+    <h2>About Our Travel Agency</h2>
+    <p>
+        Explore World provides affordable holiday packages,
+        comfortable hotels and unforgettable travel experiences.
+    </p>
+</section>
+
+<!-- Destinations -->
+<section id="destinations">
+    <h2>Popular Destinations</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500">
+            <h3>Manali</h3>
+            <p>Beautiful mountains and snowfall.</p>
+            <p>Himachal Pradesh</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500">
+            <h3>Goa</h3>
+            <p>Beautiful beaches and nightlife.</p>
+            <p>Goa, India</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=500">
+            <h3>Kerala</h3>
+            <p>Backwaters and green nature.</p>
+            <p>Kerala, India</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=500">
+            <h3>Agra</h3>
+            <p>Explore the Taj Mahal.</p>
+            <p>Uttar Pradesh</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Packages -->
+<section id="packages">
+    <h2>Holiday Packages</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500">
+            <h3>Manali Package</h3>
+            <p>5 Days / 4 Nights</p>
+            <p class="price">₹12,999</p>
+            <p>Hotel + Food + Sightseeing</p>
+            <button onclick="book('Manali')">Book Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500">
+            <h3>Goa Package</h3>
+            <p>3 Days / 2 Nights</p>
+            <p class="price">₹8,999</p>
+            <p>Hotel + Beach Tour + Food</p>
+            <button onclick="book('Goa')">Book Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=500">
+            <h3>Kerala Package</h3>
+            <p>6 Days / 5 Nights</p>
+            <p class="price">₹15,999</p>
+            <p>Hotel + Houseboat + Food</p>
+            <button onclick="book('Kerala')">Book Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Itinerary -->
+<section id="itinerary">
+    <h2>Travel Itinerary</h2>
+
+    <div class="container">
+
+        <div class="day">
+            <h3>Day 1</h3>
+            <p>Arrival and Hotel Check-in</p>
+        </div>
+
+        <div class="day">
+            <h3>Day 2</h3>
+            <p>Local Sightseeing</p>
+        </div>
+
+        <div class="day">
+            <h3>Day 3</h3>
+            <p>Adventure and Shopping</p>
+        </div>
+
+        <div class="day">
+            <h3>Day 4</h3>
+            <p>Nature Exploration</p>
+        </div>
+
+        <div class="day">
+            <h3>Day 5</h3>
+            <p>Return Journey</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Travel Inquiry -->
+<section id="contact">
+    <h2>Travel Inquiry Form</h2>
+
+    <form onsubmit="submitForm(event)">
+
+        <input type="text" id="name"
+        placeholder="Enter Your Name" required>
+
+        <input type="email" id="email"
+        placeholder="Enter Your Email" required>
+
+        <input type="tel" id="phone"
+        placeholder="Enter Phone Number"
+        pattern="[0-9]{10}" required>
+
+        <select id="destination" required>
+            <option value="">Select Destination</option>
+            <option>Manali</option>
+            <option>Goa</option>
+            <option>Kerala</option>
+            <option>Agra</option>
+        </select>
+
+        <input type="number" id="persons"
+        placeholder="Number of Travelers"
+        min="1" required>
+
+        <input type="date" id="date" required>
+
+        <button type="submit">Submit Inquiry</button>
+
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <h3>🌍 Explore World Travel Agency</h3>
+    <p>Email: exploreworld@gmail.com</p>
+    <p>Phone: 9876543210</p>
+    <p>Vijayawada, Andhra Pradesh</p>
+    <p>Copyright © 2026 Explore World</p>
+</footer>
+
+<script>
+function book(place) {
+    alert("You selected " + place + " package!");
+    location.href = "#contact";
+}
+
+function submitForm(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let destination = document.getElementById("destination").value;
+
+    alert("Thank you " + name +
+    "! Your inquiry for " + destination +
+    " has been submitted.");
+
+    event.target.reset();
+}
+</script>
+
+</body>
+</html>
