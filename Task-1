@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Foodie - Online Food Ordering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #e63946;
+            padding: 18px;
+            text-align: center;
+        }
+        nav h2 {
+            color: white;
+            display: inline;
+            margin-right: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+            font-weight: bold;
+        }
+        /* Banner */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+            url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 40px;
+        }
+        header button {
+            background: #ffb703;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        /* Sections */
+        section {
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        /* Food Cards */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            width: 230px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px gray;
+            padding-bottom: 15px;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card h3 {
+            color: #e63946;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .card button {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background: #b71c1c;
+        }
+        /* Offers */
+        #offers {
+            background: #ffe5b4;
+        }
+        /* Reviews */
+        .review {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px gray;
+        }
+        /* Contact */
+        #contact {
+            background: #e63946;
+            color: white;
+        }
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        /* Mobile Responsive */
+        @media(max-width: 600px) {
+            nav h2 {
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .card, .review {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <h2>🍔 Foodie</h2>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- Banner -->
+    <header id="home">
+        <h1>Welcome to Foodie Restaurant</h1>
+        <p>Delicious Food Delivered to Your Doorstep!</p>
+        <button onclick="location.href='#menu'">Order Now</button>
+    </header>
+    <!-- Restaurant Details -->
+    <section>
+        <h2>About Our Restaurant</h2>
+        <p>Foodie Restaurant provides fresh, tasty and
+        delicious food at affordable prices.</p>
+        <p>⭐ 4.5 Rating | 🕒 30 Minutes Delivery</p>
+    </section>
+    <!-- Menu Categories -->
+    <section id="menu">
+        <h2>Our Food Menu</h2>
+        <div class="container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500">
+                <h3>Cheese Burger</h3>
+                <p>Delicious cheese burger</p>
+                <p class="price">₹149</p>
+                <button onclick="orderFood('Cheese Burger')">Order Now</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500">
+                <h3>Pizza</h3>
+                <p>Fresh vegetable pizza</p>
+                <p class="price">₹249</p>
+                <button onclick="orderFood('Pizza')">Order Now</button>
+            </div>
+           
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500">
+                <h3>Noodles</h3>
+                <p>Hot and spicy noodles</p>
+                <p class="price">₹129</p>
+                <button onclick="orderFood('Noodles')">Order Now</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=500">
+                <h3>French Fries</h3>
+                <p>Crispy golden fries</p>
+                <p class="price">₹99</p>
+                <button onclick="orderFood('French Fries')">Order Now</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500">
+                <h3>Milkshake</h3>
+                <p>Cold chocolate milkshake</p>
+                <p class="price">₹89</p>
+                <button onclick="orderFood('Milkshake')">Order Now</button>
+            </div>
+        </div>
+    </section>
+    <!-- Special Offers -->
+    <section id="offers">
+        <h2>🎉 Special Offers</h2>
+
+        <div class="container">
+            <div class="card">
+                <h3>20% OFF</h3>
+                <p>On your first order</p>
+            </div>
+
+            <div class="card">
+                <h3>Buy 1 Get 1</h3>
+                <p>On selected pizzas</p>
+            </div>
+
+            <div class="card">
+                <h3>Free Delivery</h3>
+                <p>On orders above ₹499</p>
+            </div>
+        </div>
+    </section>
+    <!-- Customer Reviews -->
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+
+        <div class="container">
+            <div class="review">
+                <h3>Rahul</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Very tasty food and fast delivery!</p>
+            </div>
+
+            <div class="review">
+                <h3>Priya</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Excellent quality and good service.</p>
+            </div>
+
+            <div class="review">
+                <h3>Arjun</h3>
+                <p>⭐⭐⭐⭐</p>
+                <p>Affordable prices and delicious food.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: foodie@gmail.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Address: Vijayawada, Andhra Pradesh</p>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Foodie Restaurant. All Rights Reserved.</p>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        function orderFood(foodName) {
+            alert("Thank you! You selected " + foodName);
+        }
+    </script>
+</body>
+</html>
